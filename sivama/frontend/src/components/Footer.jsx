@@ -1,4 +1,5 @@
 import { Container, Row, Col,} from 'react-bootstrap';
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 import { Link } from 'react-router-dom';
 
@@ -11,9 +12,9 @@ const Footer = () => {
       <Container>
         <Row>
          
-            <Col lg={4} xl={4} sm={12} className='text-center py-3'>
+            <Col lg={4} xl={4} sm={12} className='d-flex text-center py-3 justify-content-evenly'>
 
-              <p className="footer-text">Icon 1 Icon 2 Icon 3</p> 
+              <FaFacebook style={{cursor: "pointer"}} size={30} color="#4267B2"/> <FaInstagram style={{cursor: "pointer"}} size={30} color="#C13584"/> <FaTwitter style={{cursor: "pointer"}} size={30} color="#1DA1F2"/>
             </Col>
             <Col lg={4} xl={4} sm={12} className='text-center py-3'>
 

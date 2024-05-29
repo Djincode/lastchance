@@ -41,3 +41,22 @@
   vertical-align: middle;
   margin-bottom: 19px;
 }
+.sticky-filter {
+  max-width: 200px !important;
+}
+/* .input-range__label-container{
+  left: -40% !important;
+} */
+
+.input-range {
+  width: 91% !important;
+}
+
+
+.form-label{
+  margin-bottom: 1.5rem !important;
+}
+
+.mabrand{
+  margin-top: 5px !important;
+}

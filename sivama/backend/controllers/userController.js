@@ -48,15 +48,15 @@ const registerUser = asyncHandler(async (req, res) => {
   });
 
   if (user) {
-    const subject = 'Welcome to Our App';
-    const text = `Hello ${user.name},\n\nThank you for registering at our site. We are excited to have you on board.\n\nBest Regards,\nOur Team`;
+    const subject = 'Welcome to DjinStore';
+    const text = `Hello ${user.name},\n\nThank you for registering at our site. We are excited to have you on board.\n\nBest Regards,\nDjinstore Team`;
 
     try {
       await sendEmail(user.email, subject, text);
       console.log('Email sent successfully');
     } catch (error) {
       console.error('Error sending email:', error);
-      // Inform the user about email sending failure (optional)
+     
     }
 
     res.status(201).json({

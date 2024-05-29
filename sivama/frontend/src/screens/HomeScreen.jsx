@@ -274,20 +274,37 @@ const HomeScreen = () => {
           <Meta />
           <BackgroundScene /> 
           <Container className="container">
-            <Row>
-              <Col className='d-flex justify-content-center' lg={12} md={6} sm={4}>
-                <Link to={"/all"}><button className='mx-2'>All</button></Link>
-                <Link to={"/phones"}><button className='mx-2'>Phones</button></Link>
-                <Link to={"/gameconsols"}><button className='mx-2'>Game Consols</button></Link>
-                <Link to={"/notebooks"}><button className='mx-2'>NoteBooks</button></Link>
-                <Link to={"/accesories"}><button className='mx-2'>Accesories</button></Link>
+                 
+               
+               
+            <Row className='myclass2'>
+              <Col className='myclass'  lg={2} md={12} sm={12}>
+                <Link to={"/all"}><button className='mx-2 homebuttons'>All</button></Link>
+                
               </Col>
+              <Col className='myclass' lg={2} md={12} sm={12}>
+                <Link to={"/phones"}><button className='mx-2 homebuttons'>Phones</button></Link>
+                
+              </Col>
+              <Col className='myclass' lg={2} md={12} sm={12}>
+              <Link to={"/gameconsols"}><button className='mx-2 homebuttons'>Game Consols</button></Link>
+                
+              </Col>
+              <Col className='myclass' lg={2} md={12} sm={12}>
+              <Link to={"/notebooks"}><button className='mx-2 homebuttons'>NoteBooks</button></Link>
+                
+              </Col>
+              <Col className='myclass' lg={2} md={12} sm={12}>
+              <Link to={"/accesories"}><button className='mx-2 homebuttons'>Accesories</button></Link>
+                
+              </Col>
+
             </Row>
-            <h1>Latest Products :</h1>
+            <h1 className="homeh1">Latest Products :</h1>
             <Swiper
               effect={'coverflow'}
               grabCursor={true}
-              centeredSlides={true}
+              centeredSlides={true} homebuttons
               slidesPerView={'auto'}
               coverflowEffect={{
                 rotate: 50,

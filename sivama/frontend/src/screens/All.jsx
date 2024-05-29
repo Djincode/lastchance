@@ -160,7 +160,7 @@ const All = () => {
               />
             </Form.Group>
             <Form.Group controlId="brand" className="mt-3">
-              <Form.Label>Brand</Form.Label>
+              <Form.Label className='mabrand'>Brand</Form.Label>
               <Form.Control 
                 as="select" 
                 value={selectedBrand} 

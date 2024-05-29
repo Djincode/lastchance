@@ -69,8 +69,8 @@ table th {
 }
 
 .mx-2{
-  width: 150px;
-  height: 30px;
+
+ 
   border: none;
   display: flex !important;
   justify-content: center !important;
@@ -78,6 +78,19 @@ table th {
   border-radius: 5px;
 }
 
+.homebuttons {
+    width: 150px;
+    height: 30px;
+    color:#18bc9c;
+    transition: all .5s;
+}
+.homebuttons:hover {
+  background-color: #18bc9c;
+  color: white;
+}
+.homeh1 {
+  margin-block: 50px;
+}
 
 .sticky-filter {
   position: -webkit-sticky; 
@@ -86,13 +99,31 @@ table th {
   
   z-index: 1000 !important; 
 }
-
+.myclass2{
+  justify-content: space-between;
+}
 @media (max-width: 764px) {
   .sticky-filter {
     position: -webkit-sticky; /* For Safari */
     position: static !important;
    
     z-index: 1000 !important; 
+  }
+
+ 
+}
+
+@media screen and (max-width: 990px){
+  .myclass{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .myclass2{
+    gap: 10px;
+  }
+  .homebuttons {
+    width: 350px;
   }
 }
 
