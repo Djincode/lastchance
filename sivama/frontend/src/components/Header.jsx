@@ -30,7 +30,7 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header className='nav-zindex'>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>

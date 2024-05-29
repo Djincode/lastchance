@@ -86,7 +86,7 @@ const All = () => {
   const [paginatedProducts, setPaginatedProducts] = useState([]);
   const [page, setPage] = useState(Number(pageNumber));
   const [pages, setPages] = useState(1);
-  const pageSize = 8; 
+  const pageSize = 9; 
 
   const [priceRange, setPriceRange] = useState({ min: 0, max: 5000 });
   const [selectedBrand, setSelectedBrand] = useState('');

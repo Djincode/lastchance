@@ -280,7 +280,7 @@ const HomeScreen = () => {
                 <Link to={"/phones"}><button className='mx-2'>Phones</button></Link>
                 <Link to={"/gameconsols"}><button className='mx-2'>Game Consols</button></Link>
                 <Link to={"/notebooks"}><button className='mx-2'>NoteBooks</button></Link>
-                <button className='mx-2'>Accesories</button>
+                <Link to={"/accesories"}><button className='mx-2'>Accesories</button></Link>
               </Col>
             </Row>
             <h1>Latest Products :</h1>

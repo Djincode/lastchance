@@ -102,14 +102,28 @@ table th {
 
 .background-scene {
   position: fixed !important;
-  top: 0 !important;
+  top: 50px !important;
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  z-index: -1 !important;
+  z-index: -3 !important;
 }
 
 .container {
   position: relative;
   z-index: 1;
+}
+
+.nav-zindex{
+  z-index: 5;
+  position: relative;
+}
+
+.footer {
+  z-index: 5;
+  background-color: rgb(123, 138, 139) ;
+}
+
+.footer-text{
+  color: white;
 }
