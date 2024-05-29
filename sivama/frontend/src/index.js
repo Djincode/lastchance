@@ -37,6 +37,7 @@ import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import Notebooks from './screens/Notebooks';
 import Phones from './screens/Phones';
 import Accesories from './screens/Accesories';
+import Contact from './screens/Contact';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -55,6 +56,7 @@ const router = createBrowserRouter(
         <Route path='/page/:pageNumber' element={<All />} />
       <Route path='/search/:keyword/page/:pageNumber' element={<All />}/>
       <Route path='/accesories' element={<Accesories/>}/>
+      <Route path='/contact' element={<Contact/>}/>
       
       <Route path='/gameconsols' element={<GameConsols/>}/>
       <Route path='/console/page/:pageNumber' element={<GameConsols/>}/>

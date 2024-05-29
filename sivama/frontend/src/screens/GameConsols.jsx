@@ -1,84 +1,4 @@
-// import React from 'react';
-// import { useState, useEffect } from 'react';
-// import { Row, Col } from 'react-bootstrap';
-// import { useParams,useNavigate } from 'react-router-dom';
-// import Product from '../components/Product';
-// import Loader from '../components/Loader';
-// import Message from '../components/Message';
-// import PaginateSecond from '../components/PaginateSecond';
-// import '../assets/styles/index.css';
 
-// const GameConsols = () => {
-//   const { pageNumber = 1 } = useParams();
-//   const navigate = useNavigate();
-//   const [products, setProducts] = useState([]);
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState(null);
-//   const [filteredProducts, setFilteredProducts] = useState([]);
-//   const [paginatedProducts, setPaginatedProducts] = useState([]);
-//   const [page, setPage] = useState(Number(pageNumber));
-//   const [pages, setPages] = useState(1);
-//   const pageSize = 8;
-
-
-//   const fetchData = async () => {
-//     try {
-//       setLoading(true);
-//       const response = await fetch(`http://localhost:5000/api/products/all`);
-//       if (!response.ok) {
-//         throw new Error('Failed to Fetch');
-//       }
-//       const data = await response.json();
-//       setProducts(data.products);
-//       setLoading(false);
-//     } catch (err) {
-//       setError(err.message);
-//       setLoading(false);
-//     }
-//   };
-
-//   useEffect(() => {
-//     fetchData();
-//   }, []);
-
-//   useEffect(() => {
-//     const filtered = products.filter((product) => product.category === 'console');
-//     setFilteredProducts(filtered);
-//     setPages(Math.ceil(filtered.length / pageSize));
-//   }, [products]);
-
-//   useEffect(() => {
-//     setPage(Number(pageNumber));
-//     const startIndex = (Number(pageNumber) - 1) * pageSize;
-//     const endIndex = startIndex + pageSize;
-//     const paginated = filteredProducts.slice(startIndex, endIndex);
-//     setPaginatedProducts(paginated);
-//   }, [filteredProducts, pageNumber]);
-
-
-
-//   if (loading) {
-//     return <Loader />;
-//   }
-
-//   if (error) {
-//     return <Message variant='danger'>{error}</Message>;
-//   }
-//   return (
-//     <>
-//       <Row>
-//         {paginatedProducts.map((filteredProduct) => (
-//           <Col key={filteredProduct._id} sm={12} md={6} lg={4} xl={3}>
-//             <Product product={filteredProduct} />
-//           </Col>
-//         ))}
-//       </Row>
-//       <PaginateSecond pages={pages} page={page} category='console' />
-//     </>
-//   );
-// };
-
-// export default GameConsols;
 
 import React, { useState, useEffect } from 'react';
 import { Row, Col, Form } from 'react-bootstrap';
@@ -101,7 +21,7 @@ const GameConsoles = () => {
   const [paginatedProducts, setPaginatedProducts] = useState([]);
   const [page, setPage] = useState(Number(pageNumber));
   const [pages, setPages] = useState(1);
-  const pageSize = 8;
+  const pageSize = 9;
 
   const [priceRange, setPriceRange] = useState({ min: 0, max: 100 });
   const [selectedBrand, setSelectedBrand] = useState('');

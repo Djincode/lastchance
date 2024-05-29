@@ -1,6 +1,9 @@
+
+
 import asyncHandler from '../middleware/asyncHandler.js';
 import generateToken from '../utils/generateToken.js';
 import User from '../models/userModel.js';
+import sendEmail from '../models/sendEmail.js';
 
 // @desc    Auth user & get token
 // @route   POST /api/users/auth
@@ -45,7 +48,16 @@ const registerUser = asyncHandler(async (req, res) => {
   });
 
   if (user) {
-    generateToken(res, user._id);
+    const subject = 'Welcome to Our App';
+    const text = `Hello ${user.name},\n\nThank you for registering at our site. We are excited to have you on board.\n\nBest Regards,\nOur Team`;
+
+    try {
+      await sendEmail(user.email, subject, text);
+      console.log('Email sent successfully');
+    } catch (error) {
+      console.error('Error sending email:', error);
+      // Inform the user about email sending failure (optional)
+    }
 
     res.status(201).json({
       _id: user._id,
@@ -154,6 +166,7 @@ const getUserById = asyncHandler(async (req, res) => {
     throw new Error('User not found');
   }
 });
+
 // @desc    Update user
 // @route   PUT /api/users/:id
 // @access  Private/Admin

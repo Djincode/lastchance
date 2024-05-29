@@ -26,3 +26,18 @@
   border-radius: 10px; 
   z-index: 500;
 }
+.form-wp{
+  display: flex;
+ margin-block: 30px;
+ align-items: center;
+ gap: 20px;
+}
+
+.form-wp h4 {
+  vertical-align: middle;
+}
+
+.form-wp svg {
+  vertical-align: middle;
+  margin-bottom: 19px;
+}
